@@ -8,8 +8,8 @@
 	\vspace{0pt}								% Beschreibung und Formeln hier einfügen
 	Der Junction-FET oder Sperrschicht-FET enthält eine sperrende Schicht, die entweder als in
 	Sperrrichtung betriebener pn- oder Schottky-Übergang aufgebaut ist.
-	Ab einer Schwellspannung VTH (für Threshold, Schwelle) nimmt die RLZ den ganzen Kanal ein:
-	Der JFET sperrt. Bei hohen VDS enthält der Kanal nahe des Drain's gar keine freien Elektronen,
+	Ab einer Schwellspannung $V_{TH}$ (für Threshold, Schwelle) nimmt die Raumladungszone (RLZ) den ganzen Kanal ein:
+	Der JFET sperrt. Bei hohen $V_{DS}$ enthält der Kanal nahe des Drain's gar keine freien Elektronen,
 	d.h. er ist dort „abgeschnürt“, d.h. sehr hochohmig. Der JFET wird zur gesteuerten
 	Stromquelle. \refskript{1-3}\\
 \end{minipage}
@@ -21,10 +21,10 @@
 \end{minipage}\hspace{0.05\textwidth}
 \begin{minipage}[t]{0.65\textwidth}
 	\vspace{0pt}								% Beschreibung und Formeln hier einfügen
-	Ab der sogenannten Pinch-Off-Spannung VDSP (P steht für Pinch-Off, Abschnürung) verläuft die
+	Ab der sogenannten Pinch-Off-Spannung $V_{DSP}$ (P steht für Pinch-Off, Abschnürung) verläuft die
 	Kurve flach: Der JFET wird zur gesteuerten Stromquelle.\\
 	
-	Doppelte Verstärkung benötigt 4-fachen Strom!
+	\textbf{Doppelte Verstärkung benötigt 4-fachen Strom!}
 \end{minipage}
 \vspace{2mm}
 
@@ -51,8 +51,7 @@
 	$V_{GS} < V_{TH}$\\
 	p-Substrat: Im Kanal unter dem Gate befinden sich Löcher.
 	Zwischen Substrat und Drain resp. Source bestehen pn-Übergänge mit hochohmigen
-	Raumladungszonen. Es gibt es keine freien Elektronen im Kanal.\\
-	\textbf{Der Mosfet sperrt}
+	Raumladungszonen. Es gibt es keine freien Elektronen im Kanal. \textbf{Der Mosfet sperrt}.
 	
 \end{minipage}
 \vspace{2mm}
@@ -66,7 +65,7 @@
 	$V_{GS} > V_{TH}$ (zwischen 0.5V und 3V)\\
 	Elektronen werden unter das Gate angezogen. Es entsteht ein leitender Kanal unter dem Gate.
 	Je höher die Gate-Spannung, desto tiefer reicht der leitende Kanal. Der Mosfet arbeitet als
-	\textbf{spannungsgesteuerter Widerstand} (filt für $V_{DS} < V{GS} - V-{TH}$).\\	
+	\textbf{spannungsgesteuerter Widerstand} (gilt für $V_{DS} < V_{GS} - V_{TH}$).\\	
 \end{minipage}
 \vspace{2mm}
 
@@ -78,9 +77,8 @@
 	\vspace{0pt}								% Beschreibung und Formeln hier einfügen
 	Für $V_{DS} > V_{GS} - V_{TH}$ entsteht eine Zone $\Delta L$ ohne freie Ladungsträger.
 	Der Kanal wird abgeschnürt: Ladungsträger können die Zone aber dank einer hoher
-	Drain-Spannung überwinden. Der Strom nicht weiter zu. Der Mosfet befindet sich im
-	Sättigungsbereich.
-	Der Mosfet arbeitet als \textbf{spannungsgesteuerte Stromquelle}. 
+	Drain-Spannung überwinden. Der Strom nimmt nicht weiter zu. Der Mosfet befindet sich im
+	Sättigungsbereich und arbeitet als \textbf{spannungsgesteuerte Stromquelle}. 
 \end{minipage}
 \vspace{2mm}
 
@@ -129,7 +127,7 @@
 	Transkonduktanz im Sättigungsgebiet:
 	\formula{$S = g_m = \dfrac{\delta I_D}{\delta V_{GS}} = \beta \cdot (V_{GS} - V_{TH})$}
 	\formula{$\beta = KP \dfrac{W}{L}$}
-	\formula{$KP = C_{ox} \cdot \mu_n \approx 100 \mu A / V^2$} Für n-Kanal Transistoren.
+	Für n-Kanal Transistoren: \formula{$KP = C_{ox} \cdot \mu_n \approx 100 \mu A / V^2$}
 	\formula{$g_m = \sqrt{2 \beta I_D} = \sqrt{2 \cdot KP \dfrac{W}{L} I_D}$}
 	
 	$r_{DS}$ ist in erster Näherung proportional zur Gate-Länge $L$.
