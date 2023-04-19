@@ -11,6 +11,8 @@
 \end{minipage}
 \vspace{2mm}
 
+%--------------------------------------------------------------------------------
+
 \subsubsection{CMOS Inverter}
 \begin{minipage}[t]{0.3\textwidth}
 	\vspace{0pt}								% Abbildung hier einfügen
@@ -23,22 +25,73 @@
 \end{minipage}
 \vspace{2mm}
 
+%--------------------------------------------------------------------------------
 
 \subsubsection{CMOS Gatter}
 \begin{minipage}[t]{0.45\textwidth}
 	\vspace{0pt}								% Abbildung hier einfügen
 	\subsubsection{NMOS}
-	\includegraphics[width=0.6\textwidth]{"NMOSLogik"}
+	\includegraphics[width=\textwidth]{"NMOSLogik"}
 \end{minipage}\hspace{0.05\textwidth}
 \begin{minipage}[t]{0.45\textwidth}
 	\vspace{0pt}								% Beschreibung und Formeln hier einfügen
 	\subsubsection{PMOS}
-	\includegraphics[width=0.6\textwidth]{"PMOSLogik"}
+	\includegraphics[width=\textwidth]{"PMOSLogik"}
+\end{minipage}\\
+\begin{minipage}[t]{0.45\textwidth}
+	\vspace{0pt}								% Abbildung hier einfügen
+	\subsubsection{NAND-Gatter}
+	\includegraphics[width=\textwidth, height=4cm, keepaspectratio]{"NANDGate"}
+	\begin{tabular}{|c|c|c|}
+		\hline
+		A & B & Out \\
+		\hline
+		0 & 0 & 1 \\
+		\hline
+		0 & 1 & 1 \\
+		\hline
+		1 & 0 & 1 \\
+		\hline
+		1 & 1 & 0 \\
+		\hline
+	\end{tabular}
+\end{minipage}\hspace{0.05\textwidth}
+\begin{minipage}[t]{0.45\textwidth}
+	\vspace{0pt}								% Beschreibung und Formeln hier einfügen
+	\subsubsection{NOR-Gate}
+	\includegraphics[width=\textwidth, height=4cm, keepaspectratio]{"NORGate"}
+	\begin{tabular}{|c|c|c|}
+		\hline
+		A & B & Out \\
+		\hline
+		0 & 0 & 1 \\
+		\hline
+		0 & 1 & 0 \\
+		\hline
+		1 & 0 & 0 \\
+		\hline
+		1 & 1 & 0 \\
+		\hline
+	\end{tabular}
 \end{minipage}
 \vspace{2mm}
 
+%################################################################################
+
+\subsection{Logik-Pegel: CMOS vs TTL}
+\includegraphics[width=0.2\textwidth]{"LogikPegel"}
+\includegraphics[width=0.3\textwidth]{"LogikPegel2"}
+
 
 \subsubsection{Schmitt-Trigger}
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}
+	\includegraphics[width=0.6\textwidth]{"Schmitttgrigger"}
+\end{minipage}\hspace{0.05\textwidth}
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}
+	\includegraphics[width=0.6\textwidth]{"SchmitttgriggerGraph"}
+\end{minipage}\\
 \begin{minipage}[t]{0.45\textwidth}
 	\vspace{0pt}								% Abbildung hier einfügen
 	\subsubsection{Nichtinvertierend}
@@ -51,6 +104,7 @@
 \end{minipage}
 \vspace{2mm}
 
+%--------------------------------------------------------------------------------
 
 \subsubsection{CMOS Verzögerung}
 \begin{minipage}[t]{0.45\textwidth}
@@ -65,6 +119,53 @@
 \end{minipage}
 \vspace{2mm}
 
+%################################################################################
+
+\subsection{Alternative Logik-Familien}
+\subsubsection{Dioden Logik}
+\begin{minipage}[t]{0.34\textwidth}
+	\vspace{0pt}
+	\textbf{AND Gate}\\
+	\includegraphics[width=0.6\textwidth]{"DiodenAND"}
+\end{minipage}
+\begin{minipage}[t]{0.34\textwidth}
+	\vspace{0pt}
+	\textbf{OR Gate}\\
+	\includegraphics[width=0.6\textwidth]{"DiodenOR"}
+\end{minipage}
+\vspace{2mm}
+
+%--------------------------------------------------------------------------------
+
+\begin{minipage}[t]{0.45\textwidth}
+	\vspace{0pt}								% Abbildung hier einfügen
+	\subsubsection{RTL: Resistor-Transistor-Logik}
+	\textbf{NOR Gate}\\
+	\includegraphics[width=0.6\textwidth]{"RTL"}
+\end{minipage}\hspace{0.05\textwidth}
+\begin{minipage}[t]{0.45\textwidth}
+	\vspace{0pt}								% Beschreibung und Formeln hier einfügen
+	\subsubsection{DTL: DiodenTransistor-Logik}
+	\textbf{AND Gate}\\
+	\includegraphics[width=0.6\textwidth]{"DTL"}
+\end{minipage}
+\vspace{2mm}
+
+%################################################################################
+
+\subsection{High Speed Logik}
+\subsubsection{Emitter Coupled Logic ECL}
+\begin{minipage}[t]{0.45\textwidth}
+	\vspace{0pt}								% Abbildung hier einfügen
+	\includegraphics[width=\textwidth]{"ECL"}
+\end{minipage}\hspace{0.05\textwidth}
+\begin{minipage}[t]{0.45\textwidth}
+	\vspace{0pt}								% Beschreibung und Formeln hier einfügen
+	Die Eingangsspannung $V_I$ wird mit der fixen Referenzspannung $V_R$ verglichen.
+\end{minipage}
+\vspace{2mm}
+
+%--------------------------------------------------------------------------------
 
 \subsubsection{Differenzverstärker}
 \begin{minipage}[t]{0.3\textwidth}
@@ -77,9 +178,9 @@
 \end{minipage}
 \vspace{2mm}
 
+%--------------------------------------------------------------------------------
 
-\subsection{Signalübertragung}
-\subsubsection{Emitter Coupled Logic ECL}
+\subsubsection{Current mode logic CML}
 \begin{minipage}[t]{0.3\textwidth}
 	\vspace{0pt}								% Abbildung hier einfügen
 	\includegraphics[width=\textwidth]{"CurrentModeLogic"}
@@ -90,7 +191,10 @@
 \end{minipage}
 \vspace{2mm}
 
-\subsubsection{Low Voltage Differential Signaling LVDS}
+%################################################################################
+
+\subsection{Low Voltage Differential Signaling LVDS}
+\subsubsection{LVDS mit Leitung}
 \begin{minipage}[t]{0.3\textwidth}
 	\vspace{0pt}								% Abbildung hier einfügen
 	\includegraphics[width=\textwidth]{"LVDS"}
@@ -100,6 +204,8 @@
 	LVDS muss differentiell abgeschlossen werden mit 100Ohm.
 \end{minipage}
 \vspace{2mm}
+
+%--------------------------------------------------------------------------------
 
 \subsubsection{Spannungspegel}
 \begin{minipage}[t]{0.3\textwidth}
@@ -112,6 +218,7 @@
 \end{minipage}
 \vspace{2mm}
 
+%--------------------------------------------------------------------------------
 
 \subsubsection{Datenrate und Übertragungsdistanz}
 \begin{minipage}[t]{0.3\textwidth}
