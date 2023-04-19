@@ -1,0 +1,122 @@
+\section{Spannungswandler mit Ladungspumpenr}
+\subsection{Switched Capacitor-Schaltung}
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}								% Abbildung hier einfügen
+	\includegraphics[width=\textwidth]{"SwitchedCapacitorSchaltung"}
+\end{minipage}\hspace{0.05\textwidth}
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}
+	\formula{$I_{\text{in}} = I_C = \dfrac{V_{\text{in}}}{R_S} \cdot e^{\frac{t}{R_S \cdot C}}$}\\
+	\formula{$-I_{\text{out}} = I_C = - \dfrac{V_{\text{in}}}{R_S} \cdot e^{- \frac{t^*}{R_S \cdot C}}$}\\
+	\formula{$t^* = t - \dfrac{T_{\text{per}}}{2}$}\\
+	\formula{$\overline{I_{\text{out}}} = \dfrac{\Delta Q}{T} = \dfrac{C}{T} V_{\text{in}}$}\\
+	\formula{$R_{\text{eq}} = \dfrac{T}{C}$}
+\end{minipage}
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}
+	\unitText{$I_{\text{in}}$}{Eingangsstrom (S1 geschl.)}\\
+	\unitText{$I_{\text{out}}$}{Ausgangsstrom (S2 geschl.)}\\
+	\unitText{$\overline{I_{\text{out}}}$}{Durchschnittlicher Strom}
+\end{minipage}
+\vspace{2mm}
+
+%--------------------------------------------------------------------------------
+
+\subsection{Ladungspumpen}
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}								% Abbildung hier einfügen
+	\includegraphics[width=\textwidth]{"Ladungspumpen"}
+\end{minipage}\hspace{0.05\textwidth}
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}
+	\formula{$V_{\text{out}_1} = \dfrac{Q_{\text{tot}_1}}{C_1 + C_2} = \dfrac{C_1 \cdot V_{\text{in}}}{C_1 + C_2} = \frac{1}{2} \cdot V_{\text{in}}$}\\
+	\formula{$Q_{\text{tot}_1} = C_1 \cdot V_{\text{in}}$}
+	\formula{$V_{\text{out}_2} = \frac{3}{4} V_{\text{in}}$}
+	\formula{$V_{\text{out}_3} = \frac{7}{8} V_{\text{in}}$}
+	\formula{$V_{\text{out}_4} = \frac{15}{16} V_{\text{in}}$}\\
+	\formula{$V_{\text{out}} = V_{\text{in}} \cdot (1-e^{- \frac{t}{R\cdot C}})$}
+\end{minipage}
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}
+	\includegraphics[width=\textwidth]{"LadungspumpeErsatz"}
+\end{minipage}
+\vspace{2mm}
+
+%--------------------------------------------------------------------------------
+
+\subsection{Spannungsinversion}
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}								% Abbildung hier einfügen
+	\includegraphics[width=\textwidth]{"Spannungsinversion"}
+\end{minipage}\hspace{0.05\textwidth}
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}
+	
+\end{minipage}
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}
+	
+\end{minipage}
+\vspace{2mm}
+
+%--------------------------------------------------------------------------------
+
+\subsection{Spannungsverdoppelung}
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}								% Abbildung hier einfügen
+	\includegraphics[width=\textwidth]{"Spannungsverdoppelung"}
+\end{minipage}\hspace{0.05\textwidth}
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}
+	
+\end{minipage}
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}
+	\includegraphics[width=\textwidth]{"SpannungsverdoppelungGraph"}
+\end{minipage}
+\vspace{2mm}
+
+%--------------------------------------------------------------------------------
+
+\subsection{Buck / Boost Charge Pump}
+\subsubsection{Step up Mode}
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}								% Abbildung hier einfügen
+	\includegraphics[width=\textwidth]{"StepUpModeP1"}
+\end{minipage}\hspace{0.05\textwidth}
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}
+	$\Leftarrow Q_2$ und $Q_3$ geschlossen.\\
+	$Q_1$ und $Q_4$ geschlossen. $\Rightarrow$
+\end{minipage}
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}
+	\includegraphics[width=\textwidth]{"StepUpModeP2"}
+\end{minipage}
+\vspace{2mm}
+
+%--------------------------------------------------------------------------------
+
+\subsubsection{Step down Mode}
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}								% Abbildung hier einfügen
+	\includegraphics[width=\textwidth]{"StepDownMode"}
+\end{minipage}\hspace{0.05\textwidth}
+\begin{minipage}[t]{0.65\textwidth}
+	\vspace{0pt}
+	$Q_1$ und $Q_3$ immer offen. $Q_2$ wird geschalten, $Q_4$ ist immer geschlossen.
+\end{minipage}
+\vspace{2mm}
+
+%--------------------------------------------------------------------------------
+
+\subsection{Dickson charge pump}
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}								% Abbildung hier einfügen
+	\includegraphics[width=\textwidth]{"DicksonChargePump"}
+\end{minipage}\hspace{0.05\textwidth}
+\begin{minipage}[t]{0.65\textwidth}
+	\vspace{0pt}
+	\formula{$V_{\text{out-max}} = 2 \cdot V_{SRC}  - 2 \cdot V_D$}
+\end{minipage}
+\vspace{2mm}

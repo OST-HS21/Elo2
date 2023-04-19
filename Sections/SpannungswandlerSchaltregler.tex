@@ -1,0 +1,107 @@
+\section{Spannungswandler und Schaltregler}
+\subsection{Aufwärtswandler (Boost, Step up)}
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}								% Abbildung hier einfügen
+	\includegraphics[width=\textwidth]{"Aufwaertswandler"}
+\end{minipage}\hspace{0.05\textwidth}
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}
+	\formula{$E_L = \dfrac{L}{2} i_L^2$}\\
+	\formula{$E_C = \dfrac{C}{2} V_C^2$}\\
+	\formula{$V_L = L \dfrac{d}{dt} i_L$}\\
+	\formula{$I_L = \dfrac{1}{L} \int{V_L(t) dt} + I_0$}\\
+	\formula{$\Delta I_{L \text{-on}} = \dfrac{V_{\text{in}}}{L} \cdot t_{\text{on}}$}\\
+	\formula{$\Delta I_{L \text{-off}} = \dfrac{V_{\text{in}} - V_{\text{out}}}{L} \cdot t_{\text{off}}$}\\
+	\formula{$V_{\text{out}} = V_{\text{in}} \cdot (1 + \dfrac{t_{\text{on}}}{t_{\text{off}}})$}
+\end{minipage}
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}
+	\unitText{$E_L$}{Energie im Magnetfeld}\\
+	\unitText{$E_C$}{Energie im Kondensator}\\
+	\unitText{$V_L$}{Spulenspannung}\\
+	\unitText{$I_L$}{Spulenstrom}\\
+	\unitText{$\Delta I_{L \text{-on}}$}{Ladestrom}\\
+	\unitText{$\Delta I_{L \text{-off}}$}{Entladestrom}\\
+	\unitText{$V_{\text{out}}$}{Ausgangsspannung}
+\end{minipage}
+\vspace{2mm}
+
+%--------------------------------------------------------------------------------
+
+\subsection{Abwärtswandler (Buck Converter, Durchflusswandler)}
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}								% Abbildung hier einfügen
+	\includegraphics[width=\textwidth]{"Abwaertswandler"}
+\end{minipage}\hspace{0.05\textwidth}
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}
+	\formula{$\Delta I_{L \text{-on}} = \dfrac{V_{\text{in}} - V_{\text{out}}}{L} \cdot t_{\text{on}}$}\\
+	\formula{$\Delta I_{L \text{-off}} = \dfrac{-V_{\text{out}}}{L} \cdot t_{\text{off}}$}\\
+	\formula{$V_{\text{out}} = V_{\text{in}} \cdot \dfrac{t_{\text{on}}}{t_{\text{on}} + t_{\text{off}}}$}
+\end{minipage}
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}
+	\unitText{$\Delta I_{L \text{-on}}$}{Ladestrom}\\
+	\unitText{$\Delta I_{L \text{-off}}$}{Entladestrom}\\
+	\unitText{$V_{\text{out}}$}{Ausgangsspannung}
+\end{minipage}
+\vspace{2mm}
+
+%--------------------------------------------------------------------------------
+
+\subsection{Invertierender Wandler}
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}								% Abbildung hier einfügen
+	\includegraphics[width=\textwidth]{"InvertierenderWandler"}
+\end{minipage}\hspace{0.05\textwidth}
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}
+	\formula{$\Delta I_{L \text{-on}} = \dfrac{V_{\text{in}}}{L} \cdot t_{\text{on}}$}\\
+	\formula{$\Delta I_{L \text{-off}} = \dfrac{V_{\text{out}}}{L} \cdot t_{\text{off}}$}\\
+	\formula{$V_{\text{out}} = -V_{\text{in}} \cdot \dfrac{t_{\text{on}}}{t_{\text{off}}}$}
+\end{minipage}
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}
+	\unitText{$\Delta I_{L \text{-on}}$}{Ladestrom}\\
+	\unitText{$\Delta I_{L \text{-off}}$}{Entladestrom}\\
+	\unitText{$V_{\text{out}}$}{Ausgangsspannung}
+\end{minipage}
+\vspace{2mm}
+
+%--------------------------------------------------------------------------------
+
+\subsection{Sperrwandler}
+\subsubsection{Flyback Converter}
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}								% Abbildung hier einfügen
+	\includegraphics[width=\textwidth]{"FlybackConverter"}
+\end{minipage}\hspace{0.05\textwidth}
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}
+	\includegraphics[width=\textwidth]{"FlybackConverterPhasen"}
+\end{minipage}
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}
+	Ermöglicht galvanische Trennung zwischen Ein- und Ausgang.
+	Ablauf in drei Phasen
+\end{minipage}
+\vspace{2mm}
+
+%--------------------------------------------------------------------------------
+
+\subsubsection{Power Factor Control}
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}								% Abbildung hier einfügen
+	\includegraphics[width=\textwidth]{"PowerFactorControll"}
+\end{minipage}\hspace{0.05\textwidth}
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}
+	\includegraphics[width=\textwidth]{"PFC_1"}
+\end{minipage}
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}
+	\includegraphics[width=\textwidth]{"PFC_2"}
+\end{minipage}
+\vspace{2mm}
+
+

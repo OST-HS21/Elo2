@@ -137,5 +137,39 @@
 \vspace{2mm}
 
 
+\subsubsection{MOSFET als analoger Schalter}
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}								% Abbildung hier einfügen
+	\includegraphics[width=\textwidth]{"MOSFETSchalter"}
+\end{minipage}\hspace{0.05\textwidth}
+\begin{minipage}[t]{0.65\textwidth}
+	\vspace{0pt}								% Beschreibung und Formeln hier einfügen
+	MOS-Transistoren sind gesteuerte Widerstände (für kleine VDS).
+	N-MOSFET leitet für $V_{GS} > V_{TH}$, das heist $V_{OUT} < V_{DD} - V_{TH}$.
+	\formula{$I_{D \text{ lin}} = \beta \cdot (V_{GS} - V_{TH} - \frac{1}{2} V_{DS}) \cdot V_{DS}$}
+	
+	Widerstand für kleine $V_{DS}$:
+	\formula{$r_{DS} = \dfrac{d V_{DS}}{d I_{D}} = \dfrac{1}{\beta (V_{GS} - V_{TH})}$}
+	
+	
+\end{minipage}
+\vspace{2mm}
+
+\subsubsection{Transmision Gate}
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}								% Abbildung hier einfügen
+	\includegraphics[width=\textwidth]{"MOSFETTransmissionGate"}
+\end{minipage}\hspace{0.05\textwidth}
+\begin{minipage}[t]{0.65\textwidth}
+	\vspace{0pt}								% Beschreibung und Formeln hier einfügen
+	
+\end{minipage}
+\vspace{2mm}
+
+
+
+
+
+
 
 
