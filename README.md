@@ -2,8 +2,9 @@
 
 Formelsammlung zur Elektronik 2 Vorlesung von Prof. Guido Keel
 
-- [x] Kapitle 1
-- [x] Kapitle 2
-- [x] Kapitle 3
-- [x] Kapitle 4
-- [x] Kapitle 5
+## Kapitel
+- [x] 1 - Transistoren
+- [x] 2 - Logikschaltungen
+- [x] 3 - Referenzen Regler
+- [x] 4 - Ladungspumpen
+- [x] 5 - Schaltregler
