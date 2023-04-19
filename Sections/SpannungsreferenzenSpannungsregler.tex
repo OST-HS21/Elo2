@@ -5,11 +5,14 @@
 	\vspace{0pt}								% Abbildung hier einfügen
 	\includegraphics[width=0.4\textwidth]{"Spannungsteiler"}
 \end{minipage}\hspace{0.05\textwidth}
-\begin{minipage}[t]{0.65\textwidth}
-	\vspace{0pt}								% Beschreibung und Formeln hier einfügen
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}
+	\formula{$V_{\text{ref}} = \dfrac{R_2}{R_1 + R_2} V_{\text{pos}}$}\\
+	\formula{$\Delta V_{\text{ref}} = \dfrac{R_2}{R_1+R_2} \Delta V_{\text{pos}}$}
+\end{minipage}
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}
 	Bessere Temperaturabhängigkeit
-	
-	\formula{$V_{\text{ref}} = \dfrac{R_2}{R_1 + R_2} V_{\text{pos}}$}
 \end{minipage}
 \vspace{2mm}
 
@@ -19,12 +22,37 @@
 	\includegraphics[width=0.4\textwidth]{"Diodenreferenz"}
 	\includegraphics[width=0.4\textwidth]{"Diodenreferenz4dioden"}
 \end{minipage}\hspace{0.05\textwidth}
-\begin{minipage}[t]{0.65\textwidth}
-	\vspace{0pt}								% Beschreibung und Formeln hier einfügen
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}
+	\formula{$V_{\text{ref}} = V_D = n \cdot \dfrac{k T}{q} \cdot \ln{\left( \dfrac{I_D}{I_S} \right)}$}\\
+	\formula{$I_D = I_S \cdot (e^{\frac{V_D}{n \cdot V_T}} - 1)$}\\
+	\formula{$I = \dfrac{V_{\text{pos}} - V_D}{R1} \approx \dfrac{V_{\text{pos}}}{R_1}$}\\
+	\formula{$\underset{V_{\text{pos}}}{S} = \dfrac{\Delta V_{\text{ref}}}{\Delta I} \cdot \dfrac{I}{V_{\text{ref}}}$}\\
+	\formula{$\underset{I}{S} = \dfrac{1}{\ln{\left(\dfrac{I}{I_S} \right)}} \ll 1$}\\
+	\formula{$r_D = \dfrac{n \cdot V_T}{I_D}$}
+\end{minipage}
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}
 	Kleine Speisespannungsabhängigkeit
+	Dieode hat Temperaturabhängigkeit von $-2 mV/K$
 	
+	\unitText{$n$}{Parallele Dioden}
+\end{minipage}
+\vspace{2mm}
+
+
+\subsubsection{Zenerdioden Referenz}
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}								% Abbildung hier einfügen
+	\includegraphics[width=0.4\textwidth]{"ZenerdiodeReferenz"}
+\end{minipage}\hspace{0.05\textwidth}
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}
+	\formula{$I_{\text{out-max}} = \dfrac{V_{\text{pos}} - V_{\text{ref}}}{R_1}$}
+\end{minipage}
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}
 	
-	Ergänzen: Z-Diode
 \end{minipage}
 \vspace{2mm}
 
@@ -34,20 +62,29 @@
 	\vspace{0pt}								% Abbildung hier einfügen
 	\includegraphics[width=\textwidth]{"BootstrapReferenz"}
 \end{minipage}\hspace{0.05\textwidth}
-\begin{minipage}[t]{0.65\textwidth}
-	\vspace{0pt}								% Beschreibung und Formeln hier einfügen
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}
+	\formula{$V_{D_1} = n V_T \ln{\left( \dfrac{I_1}{I_S} \right) } = I_2 R_2 = V_{R_2}$}\\
 	
+\end{minipage}
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}
+	\includegraphics[width=\textwidth]{"BootstrapGraph"}
 \end{minipage}
 \vspace{2mm}
 
 
 \subsection{Shunt Voltage Referenz}
 \begin{minipage}[t]{0.3\textwidth}
-	\vspace{0pt}								% Abbildung hier einfügen
+	\vspace{0pt}
 	\includegraphics[width=\textwidth]{"shuntvoltagereference"}
 \end{minipage}\hspace{0.05\textwidth}
-\begin{minipage}[t]{0.65\textwidth}
-	\vspace{0pt}								% Beschreibung und Formeln hier einfügen
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}
+	\includegraphics[width=\textwidth]{"shuntvoltagereferenceadjustable"}
+\end{minipage}
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}
 	
 \end{minipage}
 \vspace{2mm}
