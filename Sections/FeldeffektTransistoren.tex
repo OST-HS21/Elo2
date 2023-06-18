@@ -23,8 +23,13 @@
 	\vspace{0pt}								% Beschreibung und Formeln hier einfügen
 	Ab der sogenannten Pinch-Off-Spannung $V_{DSP}$ (P steht für Pinch-Off, Abschnürung) verläuft die
 	Kurve flach: Der JFET wird zur gesteuerten Stromquelle.\\
-	
+	\formula{$\mathit{gm} = \dfrac{2}{|V_p|} \sqrt{V_{GS} - V_p}$}
 	\textbf{Doppelte Verstärkung benötigt 4-fachen Strom!}
+	\unitText{$\mathit{gm}$}{Transkonduktanz / Mass für Verstärkung}
+	
+	\formula{$I_{D_{Widerstandsbereich}} = \dfrac{2 I_{DSS}}{V^2_P} (V_{GS} - V_P - \dfrac{V_{DS}}{2}) V_{DS}$}\\
+	\formula{$I_{D_{Abschnürbereich}} = \dfrac{I_{DSS}}{V^2_p} (V_{GS} - V_p)^2$}
+	\unitText{$I_{DSS}$}{Kurzschlussstrom von Gate zu Source}
 \end{minipage}
 \vspace{2mm}
 
@@ -33,7 +38,7 @@
 \subsection{MOSFET}
 \begin{minipage}[t]{0.3\textwidth}
 	\vspace{0pt}								% Abbildung hier einfügen
-	\includegraphics[width=\textwidth]{"MOSFET"}
+	\includegraphics[width=0.8\textwidth]{"MOSFET"}
 \end{minipage}\hspace{0.05\textwidth}
 \begin{minipage}[t]{0.65\textwidth}
 	\vspace{0pt}								% Beschreibung und Formeln hier einfügen
@@ -125,13 +130,13 @@
 \begin{minipage}[t]{0.65\textwidth}
 	\vspace{0pt}								% Beschreibung und Formeln hier einfügen
 	Transkonduktanz im Sättigungsgebiet:
-	\formula{$S = g_m = \dfrac{\delta I_D}{\delta V_{GS}} = \beta \cdot (V_{GS} - V_{TH})$}
+	\formula{$S = g_m = \dfrac{\partial I_D}{\partial V_{GS}} = \beta \cdot (V_{GS} - V_{TH})$}
 	\formula{$\beta = KP \dfrac{W}{L}$}
 	Für n-Kanal Transistoren: \formula{$KP = C_{ox} \cdot \mu_n \approx 100 \mu A / V^2$}
 	\formula{$g_m = \sqrt{2 \beta I_D} = \sqrt{2 \cdot KP \dfrac{W}{L} I_D}$}
 	
 	$r_{DS}$ ist in erster Näherung proportional zur Gate-Länge $L$.
-	\formula{$\dfrac{1}{r_{DS}} = g_{DS} = \dfrac{\delta I_D}{\delta V_{GS}} =
+	\formula{$\dfrac{1}{r_{DS}} = g_{DS} = \dfrac{\partial I_D}{\partial V_{GS}} =
 		      \lambda \cdot I_D .\propto \dfrac{1}{L}$}
 \end{minipage}
 \vspace{2mm}

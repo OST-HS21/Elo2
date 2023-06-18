@@ -1,0 +1,246 @@
+\section{Rauschen}
+
+\begin{minipage}[t]{0.4\textwidth}
+	\vspace{0pt}
+	\includegraphics[width=\textwidth]{"Rauschen"}
+\end{minipage}\hspace{0.05\textwidth}
+\begin{minipage}[t]{0.2\textwidth}
+	\vspace{0pt}
+	\formula{$\overline{v_n} = \dfrac{1}{T} \int_T v_n(t) \,dt = 0$}\\
+	\formula{$v_{eff}^2 = \overline{v_n^2} = \dfrac{1}{t} \int_T v_n^2 \,dt = \sigma^2$}\\
+	\formula{$v_{n,rms} = \sqrt{\overline{v_n^2}}$}
+\end{minipage}\hspace{0.05\textwidth}
+\begin{minipage}[t]{0.3\textwidth}
+	\unitText{$\overline{v_n}$}{Mittelwert der Rauschspannung}\\
+	\unitText{$v_{n,eff}^2$}{Varianz / quad. Mittelwert}\\
+	\unitText{$\overline{v_n^2}$}{Mittlere Leistung}\\
+	\unitText{$v_{n,rms}$}{Effektivwert}
+\end{minipage}
+\vspace{2mm}
+
+
+%--------------------------------------------------------------------------------
+
+\subsubsection{Quantisierungsrauschen von A/D -Wandler}
+Das Quantisierungsrauschen ist etwa so gross wie das elektronische Rauschen.\\
+\begin{minipage}[t]{0.4\textwidth}
+	\vspace{0pt}
+	\includegraphics[width=\textwidth]{"QuantisierungsrauschenTabelle"}
+\end{minipage}\hspace{0.05\textwidth}
+\begin{minipage}[t]{0.2\textwidth}
+	\vspace{0pt}
+	\formula{$q = \dfrac{V_{refp} - V_{refn}}{2^n}$}\\
+	Gesamte Leistung bei gleichverteilung:
+	\formula{$\dfrac{q^2}{12}$}\\
+	Signal-Rauschabstand:
+	\formula{$n \cdot 6\text{dB} + 1.76$}\\
+	\formula{$S = \dfrac{q^2}{12} \dfrac{1}{f_s}$}
+\end{minipage}\hspace{0.05\textwidth}
+\begin{minipage}[t]{0.3\textwidth}
+	\unitText{$q$}{Quantisierungsintervall}\\
+	\unitText{$S$}{Leistungsdichte}\\
+\end{minipage}
+\vspace{2mm}
+%--------------------------------------------------------------------------------
+
+
+\subsection{Rauscharten}
+
+%--------------------------------------------------------------------------------
+
+\subsubsection{Thermisches Rauschen} \label{thermischesrauschen}
+Auch "Johnson Noise" genannt, tritt infolge der Brown‘schen Bewegung der Ladungsträger in allen Widerständen bereits im stromlosen Zustand auf.
+Ist über die Frequenzen gleichverteilt und wird als \textbf{weisses Rauschen} bezeichnet. Siehe auch \ref{rauschenvonwiderständen}
+
+%--------------------------------------------------------------------------------
+
+\subsubsection{Flicker Noise / Funkelrauschen}
+Entsteht am Übergang von 2 Materialien.
+Wird auch \textbf{Pink noise} genannt. Jede dekade liefert die gleiche Rauschleistung.
+Nimmt mit $\dfrac{1}{f}$ ab.
+
+%--------------------------------------------------------------------------------
+
+\subsubsection{Shot Noise}
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}
+	Auch Schottky noise oder quantum noise. Verursacht durch zufällige Fluktuationen der Bewegung von Ladungsträgern, die Potentialbarrieren überwinden müssen.
+\end{minipage}\hspace{0.05\textwidth}
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}
+	\formula{$E_{sh} = k T \sqrt{\dfrac{2 B}{q l_{dc}}}$}
+\end{minipage}\hspace{0.05\textwidth}
+\begin{minipage}[t]{0.3\textwidth}
+	\unitText{$k=1.38 \cdot 10^{-23}$}{Boltzmankonstante}\\
+	\unitText{$T$}{Absolute Temperatur}\\
+	\unitText{$B$}{Bandbreite}\\
+	\unitText{$q=1.6 \cdot 10^{-19}$}{Elementarladung}\\
+	\unitText{$I_{dc}$}{Durchschnittlicher Strom}
+\end{minipage}
+\vspace{2mm}
+%--------------------------------------------------------------------------------
+
+\subsubsection{Burst (popcorn) noise}
+Entsteht bei Kristallgitter-Fehlern. Auch random telegraph signal (RTS) noise genannt und kommt in modernen Halbleitern nur noch selten vor.
+
+%--------------------------------------------------------------------------------
+
+\subsubsection{Avalanche Noise}
+Entsteht in Dioden im “Reverse breakdown” mode (z.B. bei Zenerdioden).
+Elektronen mit hoher Energie prallen auf Kristallgitter und lösen weitere Elektronen-Loch-Paare aus, also eine Lawineneffekt.
+
+%--------------------------------------------------------------------------------
+
+
+\subsection{Rauschen von Widerständen} \label{rauschenvonwiderständen}
+
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}
+	\includegraphics[width=\textwidth]{"Widerstandsrauschen"}
+\end{minipage}\hspace{0.05\textwidth}
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}
+	\formula{$\overline{v^2_n} = 4 k T R B$}
+	\formula{$\overline{i^2_n} = 4 k T G B$}
+	\formula{$E_n = \sqrt{4 k T R}$}
+	\formula{$E_{n,rms} = \sqrt{4 k T R B}$}
+	\formula{$S = 4 k T R$}\\
+	
+	Seriell: \formula{$S = 4 k T (R_1 + R_2)$}\\
+	Parallel: \formula{$S = 4 k T (R_1 \parallel R_2)$}\\
+	
+	Siehe auch \ref{thermischesrauschen}
+\end{minipage}\hspace{0.05\textwidth}
+\begin{minipage}[t]{0.3\textwidth}
+	\unitText{$\overline{v^2_n}$}{Leerlauf-Rauschspannung}\\
+	\unitText{$\overline{i^2_n}$}{Kurzschluss-Rauschstrom}\\
+	\unitText{$E_n$}{Spekt. Rauschspannungs-Dichte}\\
+	\unitText{$E_{n,rms}$}{RMS Rauschspannung}\\
+	\unitText{$k=1.38 \cdot 10^{-23}$}{Boltzmankonstante}\\
+	\unitText{$T$}{Absolute Temperatur}\\
+	\unitText{$B$}{Bandbreite}\\
+	\unitText{$R$}{Leiterwiderstand}\\
+	\unitText{$G$}{Leitungs-Leitwert}\\
+	\unitText{$S$}{Spektrale Leistungsdichte}
+\end{minipage}
+\vspace{2mm}
+%--------------------------------------------------------------------------------
+
+\subsubsection{Spannungsteiler}
+\begin{minipage}[t]{0.1\textwidth}
+	\vspace{0pt}
+	\includegraphics[width=\textwidth]{"Spannungsteiler2"}
+\end{minipage}\hspace{0.05\textwidth}
+\begin{minipage}[t]{0.4\textwidth}
+	\vspace{0pt}
+	\formula{$S_{R_1} = 4 k T R_1$}
+	\formula{$S_{R_2} = 4 k T R_2$}
+	\formula{$S_{R_1 V_{out}} = 4 k T R_1 \left(\dfrac{R_2}{R_1 + R_2}\right)^2$}
+	\formula{$S_{R_2 V_{out}} = 4 k T R_2 \left(\dfrac{R_1}{R_1 + R_2}\right)^2$}
+	\formula{$S_{V_{out}} = S_{R_1 V_{out}} + S_{R_2 V_{out}} = 4 k T \dfrac{R_1 \cdot R_2}{R_1 + R_2}$}
+\end{minipage}\hspace{0.05\textwidth}
+\begin{minipage}[t]{0.4\textwidth}
+	\unitText{$S_{R_{1,2}}$}{Spektrale Leistungsdichten}\\
+	\unitText{$S_{V_{out}}$}{Äquivalente Rauschquelle am Ausgang}
+\end{minipage}
+\vspace{2mm}
+%--------------------------------------------------------------------------------
+
+
+\subsubsection{Serie- und Parallelschaltung}
+\begin{minipage}[t]{0.4\textwidth}
+	\vspace{0pt}
+	\includegraphics[width=\textwidth]{"WiderstandSerielParallel"}
+\end{minipage}\hspace{0.05\textwidth}
+\begin{minipage}[t]{0.55\textwidth}
+	\vspace{0pt}
+	Äquivaltente Schaltung von Spannungsteiler. Quellenumwandlung und dann Erstazwiderstand gesehen vom Ausgang.
+	\formula{$\overline{v^2_{T_n}} = 4 k T R_T B = 4 k T (R_2 + R_1\parallel R_3) B$}\\
+	\unitText{$\overline{v^2_{T_n}}$}{Rauschleistung von $R_1$, $R_2$ und $R_3$}
+\end{minipage}\hspace{0.05\textwidth}
+\vspace{2mm}
+%--------------------------------------------------------------------------------
+
+\subsubsection{Rausch-Bandbreite}
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}
+	\includegraphics[width=\textwidth]{"RauschBandbreite"}
+\end{minipage}\hspace{0.05\textwidth}
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}
+	\formula{$f_c = \mathit{BW} = \dfrac{1}{2 \pi R C}$}
+	\formula{$\mathit{NBW} = \dfrac{1}{4 R C} = \dfrac{\pi}{2} f_c$}
+\end{minipage}\hspace{0.05\textwidth}
+\begin{minipage}[t]{0.3\textwidth}
+	\unitText{$f_c \text{,} \mathit{BW}$}{Systembandbreite (3dB)}\\
+	\unitText{$\mathit{NBW}$}{Rauschbandbreite}
+\end{minipage}
+\vspace{2mm}
+
+%--------------------------------------------------------------------------------
+
+\subsubsection{RC-Netzwerke}
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}
+	\includegraphics[width=\textwidth]{"RauschenRC"}
+\end{minipage}\hspace{0.05\textwidth}
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}
+	Kapazitäten und Induktivitäten rauschen nicht, ändern aber die Bandbreite des Systems.\\
+	\formula{$e_{on} = \sqrt{4 k T R} \sqrt{\dfrac{1}{4 R C}} = \sqrt{\dfrac{k T}{C}}$}
+\end{minipage}\hspace{0.05\textwidth}
+\begin{minipage}[t]{0.3\textwidth}
+	\unitText{$e_{on}$}{Rauschspannung}\\
+	\unitText{$k=1.38 \cdot 10^{-23}$}{Boltzmankonstante}\\
+	\unitText{$T$}{Absolute Temperatur}\\
+	\unitText{$C$}{Kapazität}
+\end{minipage}
+\vspace{2mm}
+
+%--------------------------------------------------------------------------------
+
+\subsection{Opamp Rauschen}
+
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}
+	\includegraphics[width=0.7\textwidth]{"OpampRasuchen"}
+\end{minipage}\hspace{0.05\textwidth}
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}
+	\formula{$e_n = V_{noise}$}\\
+	Besten Opamp's: \formula{$V_{noise} \cong 1 \frac{\text{nV}}{\sqrt{\text{Hz}}}$}\\
+	Typische Opamp's: \formula{$V_{noise} \cong 25 \frac{\text{nV}}{\sqrt{\text{Hz}}}$}\\
+	Stromrauschen bei Bipolar-Opams: \formula{$I_{noise BJT} \sim 10 \frac{\text{pA}}{\sqrt{\text{Hz}}}$}\\
+	Stromrauschen bei Feldeffekt-Opams: \formula{$I_{noise MOS} < 1 \frac{\text{pA}}{\sqrt{\text{Hz}}}$}
+\end{minipage}\hspace{0.05\textwidth}
+\begin{minipage}[t]{0.3\textwidth}
+	\unitText{$V_{noise}$}{Rausch-Spannungsdichte}
+\end{minipage}
+\vspace{2mm}
+
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}
+	\includegraphics[width=\textwidth]{"OpampRasuchenBsp"}
+\end{minipage}\hspace{0.05\textwidth}
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}
+	Ausgangs-Rauschspannung $E_0$ mittels Superposition berechnen.\\
+	\formula{$\mathit{ENB} = \dfrac{\mathit{GBP}}{A} \dfrac{\pi}{2}$}
+	\formula{$A = \dfrac{R_1 + R_2}{R_1}$}
+	\formula{$S_{R_1 R_2} = 4 k T R_2 A$}\\
+	Für die Bandbreite $\gg$ Noise Corner Frequency wird $\frac{1}{f}$ vernachlässigt (Bandbraite $>$ 10kHz):
+	\formula{$V_{noise} = \sqrt{4 k T R_2 A \mathit{ENB} + e^2_w A^2 \mathit{ENB}}$}
+\end{minipage}\hspace{0.05\textwidth}
+\begin{minipage}[t]{0.3\textwidth}
+	\unitText{$\mathit{ENB}$}{Rausch-Bandbreite} [Hz]\\
+	\unitText{$\mathit{GBP}$}{Verstärkungs-Bandbreite-Produkt} [Hz]\\
+	\unitText{$A$}{Verstärkungsfaktor}\\
+	\unitText{$S_{R_1 R_2}$}{Rauschleistungs-Anteile von R1 und R2}
+\end{minipage}
+\vspace{2mm}
+
+%--------------------------------------------------------------------------------
+
+
+
+

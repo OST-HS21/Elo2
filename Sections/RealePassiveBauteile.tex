@@ -1,0 +1,113 @@
+\section{Reale passive Bauteile}
+
+\subsection{Widerstände}
+
+%--------------------------------------------------------------------------------
+
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}
+	\includegraphics[width=\textwidth]{"Widerstand"}
+\end{minipage}\hspace{0.05\textwidth}
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}
+	\formula{$R = \rho \cdot \dfrac{l}{w \cdot d}$}\\
+	Kupfer bei 20°C ca. $0.0178 \frac{\Omega mm^2}{m}$
+\end{minipage}\hspace{0.05\textwidth}
+\begin{minipage}[t]{0.3\textwidth}
+	\unitText{$\rho$}{Spez. Widerstand}
+\end{minipage}
+\vspace{2mm}
+
+%--------------------------------------------------------------------------------
+\subsubsection{Frequenzverhalten}
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}
+	\includegraphics[width=0.8\textwidth]{"WiderstandReel"}
+\end{minipage}\hspace{0.05\textwidth}
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}
+	\includegraphics[width=\textwidth]{"WiderstandFrequenzverhalten"}
+\end{minipage}\hspace{0.05\textwidth}
+\begin{minipage}[t]{0.3\textwidth}
+	Bei Realen Bauteilen ist $L_s$ ca. 5nH und $C_p$ ca. 0.5pF.
+\end{minipage}
+\vspace{2mm}
+
+%--------------------------------------------------------------------------------
+\subsubsection{Temperatursensor}
+\begin{minipage}[t]{0.2\textwidth}
+	\vspace{0pt}
+	\textbf{PTC}\\
+	Für Temperaturen > 0°C:
+	\formula{$R = R_0 \cdot (1 + \alpha \cdot t + \beta \cdot t^2)$}\\
+	
+\end{minipage}\hspace{0.05\textwidth}
+\begin{minipage}[t]{0.2\textwidth}
+	\vspace{0pt}
+	\unitText{$\alpha$}{$3.9083 \cdot 10^{-3}$}\\
+	\unitText{$\beta$}{$-5.775 \cdot 10^{-7}$}
+\end{minipage}\hspace{0.05\textwidth}
+\begin{minipage}[t]{0.2\textwidth}
+	\textbf{NTC}\\
+	\formula{$R_T = R_R \cdot e^{B \left(\dfrac{1}{T} - \dfrac{1}{T_R}\right)}$}\\
+\end{minipage}\hspace{0.05\textwidth}
+\begin{minipage}[t]{0.2\textwidth}
+	\vspace{0pt}
+	\unitText{$R_T$}{R bei Temperatur $T$ in K}\\
+	\unitText{$R_R$}{R bei Temperatur $T_R$ in K}\\
+	\unitText{$B$}{Material-spez. Konst.}\\
+	\unitText{$e$}{Eulersche Zahl}
+\end{minipage}
+\vspace{2mm}
+
+%--------------------------------------------------------------------------------
+
+
+\subsection{Kondensatoren}
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}
+	\includegraphics[width=0.6\textwidth]{"Kapazität"}
+\end{minipage}\hspace{0.05\textwidth}
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}
+	\formula{$C = \varepsilon_r \varepsilon_0 \dfrac{W L}{d} = \varepsilon_r \varepsilon_0 \frac{E}{d}$}
+	\formula{$f = \dfrac{1}{2 \pi \sqrt{L C}}$}
+	\formula{$|Z| = \sqrt{(|X_C| - |X_L|)^2 + |R|^2}$}\\
+	\unitText{$\varepsilon_0$}{8.85 $\frac{\text{pF}}{\text{m}}$}\\
+	\unitText{$f$}{Resonanzfrequenz}
+\end{minipage}\hspace{0.05\textwidth}
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}
+	\includegraphics[width=\textwidth]{"KondensatorErsatzschaltung"}
+	Der Lekstrom ($R_{Leak}$) kann meist vernachläsigt werden.
+\end{minipage}
+\vspace{2mm}
+
+%--------------------------------------------------------------------------------
+
+\subsection{Induktivitäten, Spulen}
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}
+	\includegraphics[width=\textwidth]{"SpuleReel"}
+\end{minipage}\hspace{0.05\textwidth}
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}
+	\includegraphics[width=\textwidth]{"LeitungsInduktivität"}
+\end{minipage}\hspace{0.05\textwidth}
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}
+	Leitungsinduktivität:
+	\formula{$L = \dfrac{\mu l}{\pi} \ln{\dfrac{w}{r}}$}
+	Für $l \gg w\gg r$.
+\end{minipage}
+\vspace{2mm}
+
+
+
+%--------------------------------------------------------------------------------
+
+
+
+
+
+

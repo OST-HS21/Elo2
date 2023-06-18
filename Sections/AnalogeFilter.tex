@@ -1,0 +1,211 @@
+\section{Analoge Filter}
+\subsection{Tiefpass-Filter 1. Ordnung}
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}
+	\includegraphics[width=\textwidth]{"Tiefpass1OrdnungRC"}
+\end{minipage}\hspace{0.05\textwidth}
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}
+	\formula{$\tau = R C$}\\
+	\formula{$G_1 = \dfrac{1}{1 + j \omega R C}$}\\
+	\formula{$f_{3dB} = \dfrac{1}{2 \pi r C}$}
+\end{minipage}
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}
+	
+\end{minipage}
+\vspace{2mm}
+
+%--------------------------------------------------------------------------------
+
+
+\subsection{Passiver RC-Tiefpass 2. Ordnung}
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}								% Abbildung hier einfügen
+	\includegraphics[width=\textwidth]{"PassiverRCTiefpass2O"}
+\end{minipage}\hspace{0.05\textwidth}
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}
+	\formula{$G_p = \dfrac{1}{1 + (C_1 R_1 + C_2 R_1 + C_2 R_2) \cdot s + C_1 C_2 R_1 R_2 s^2}$}\\
+	\formula{$\omega_0 = \dfrac{1}{\sqrt{C_1 C_2 R_1 R_2}}$}\\
+	\formula{$Q = \dfrac{\sqrt{C_1 C_2 R_1 R_2}}{R_1 C_1 + R_1 C_2 +C_2 R_2}$}
+\end{minipage}
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}
+	
+\end{minipage}
+\vspace{2mm}
+
+%--------------------------------------------------------------------------------
+
+
+\subsection{Aktive Filter}
+\subsubsection{Sallen Key}
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}
+	\includegraphics[width=\textwidth]{"SallenKeyTiefpass"}
+\end{minipage}\hspace{0.05\textwidth}
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}
+	\formula{$G_0 = \dfrac{R_A + R_B}{R_B}$}\\
+	\formula{$G = \dfrac{G_0}{C_1 C_2 R_1 R_2 s^2 + \left(C_2 (R_1 + R_2) + C_1 R_1 (1 - G_0)\right) + 1}$}
+	\formula{$Q = \dfrac{\sqrt{C_1 C_2 R_1 R_2}}{C_2 (R_1 + R_2) + C_1 R_1 (1 - G_0)}$}
+\end{minipage}
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}
+	\unitText{$G_0$}{Verstärkung}\\
+	\unitText{$G$}{Übertragungsfunktion}\\
+	\unitText{$Q$}{Güte}
+\end{minipage}
+\vspace{2mm}
+
+
+%--------------------------------------------------------------------------------
+
+\subsubsection{Sallen Key bei hohen Frequenzen}
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}
+	\includegraphics[width=\textwidth]{"SallenKeyHF"}
+\end{minipage}\hspace{0.05\textwidth}
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}
+	\formula{$\dfrac{V_{out}}{V_{in}} = \dfrac{r_{OL} \parallel R_2 \parallel (R_A + R_B)}{R_1 + r_{OL} \parallel R_2 \parallel (R_A + R_B)} \approx \dfrac{r_{OL}}{R_1 + r_{OL}}$}
+\end{minipage}
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}
+	
+\end{minipage}
+\vspace{2mm}
+
+
+%--------------------------------------------------------------------------------
+
+\subsubsection{Multiple Feedback Struktur}
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}
+	\includegraphics[width=\textwidth]{"SallenKeyMultiFeedback"}
+\end{minipage}\hspace{0.05\textwidth}
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}
+	\formula{$G = \dfrac{G_0}{1 + C_2 \left(R_2 + R_3 + R_3 \dfrac{R_2}{R_1}\right) s + C_1 C_2 R_2 R_3 s^2}$}\\
+	\formula{$Q = \dfrac{\sqrt{C_1 C_2 R_2 R_3}}{C_2 \left(R_2 + R_3 + R_3 \dfrac{R_2}{R_1}\right)}$}
+\end{minipage}
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}
+	
+\end{minipage}
+\vspace{2mm}
+
+
+%--------------------------------------------------------------------------------
+
+\subsubsection{Zustandsvariablen-Filter}
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}
+	\includegraphics[width=\textwidth]{"ZustandsvariablenFilter"}
+\end{minipage}\hspace{0.05\textwidth}
+\begin{minipage}[t]{0.6\textwidth}
+	\vspace{0pt}
+	\formula{$A = - \dfrac{R_{fb}}{R_{in}}$}
+	\formula{$V_{out} = - \dfrac{1}{c C_{i2} R_{i2}} V_{opo2}$}
+	\formula{$V_{opo2} = - \dfrac{R_2}{R_1} V_{opo1}$}
+	\formula{$V_{opo1} = \dfrac{-1}{s C_{i1}} \left(\dfrac{V_{in}}{R_{in}} + \dfrac{V_{out}}{R_{fb}} + s \cdot C_{fb} V_{out}\right)$}
+	\formula{$G = \dfrac{\dfrac{- R_{fb}}{R_{in}}}{s^2 C_{i1} C_{i2} R_{fb} R_{i2} \dfrac{R_1}{R_2} + s C_{fb} R_{fb + 1}}$}
+	\formula{$f_0 = \dfrac{1}{2 \pi \sqrt{C_{i1} C_{i2} R_{fb} R_{i2} \dfrac{R_1}{R_2}}}$}
+	\formula{$Q = \dfrac{1}{C_{fb}} \sqrt{C_{i1} C_{i2} \dfrac{R_1}{R_2 R_{fb}}}$}
+\end{minipage}
+\vspace{2mm}
+
+%--------------------------------------------------------------------------------
+
+\subsection{Signalflussdiagramme}
+\subsubsection{Mason's Regel}
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}								% Abbildung hier einfügen
+	\formula{$H_{ij} = \dfrac{\sum{(P_k \cdot \Delta_k)}}{\Delta} = \dfrac{Y}{X}$}
+\end{minipage}\hspace{0.05\textwidth}
+\begin{minipage}[t]{0.6\textwidth}
+	\vspace{0pt}
+	\unitText{$P_k$}{\textbf{Vorwärtspfad} $k$ (start von Eingang): Multiplikation von jeder Sehne von Start bis Ziel}\\
+	\unitText{$\Delta_k$}{\textbf{Kofaktor} des $k$-ten Pfades: 1 - (Summe aller Schleifen, die $P_k$ nicht berühren) + (Summe aller Produkte zweier Schleifen, die $P_k$ nicht berühren) + (Summe aller Produkte dreier Schleifen, die $P_k$ nicht berühren) + ...}\\
+	\unitText{$\Delta$}{\textbf{Netzwerkdeterminante}: 1 - (Summe aller Schleifen) + (Summe aller Produkte zweier Schleifen, die sich nicht berühren) - (Summer aller Produkte dreier Schleifen, die sich nicht berühren) + ...}
+\end{minipage}
+\vspace{2mm}
+
+%--------------------------------------------------------------------------------
+
+
+\subsubsection{Beispiele}
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}								% Abbildung hier einfügen
+	\includegraphics[width=\textwidth]{"Signalflussdiagramme"}
+\end{minipage}\hspace{0.05\textwidth}
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}
+	\includegraphics[width=\textwidth]{"Signalflussdiagramme2"}
+\end{minipage}
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}
+	Satz von Mason!
+	\formula{$G_2(s) = \dfrac{\dfrac{Z_{20}}{Z_{12}} \cdot \dfrac{Z_{30}}{Z_{23}}}{1 + \dfrac{Z_{20}}{Z_{12}} + \dfrac{Z_{20}}{Z_{23}} + \dfrac{Z_{30}}{Z_{23}} + \dfrac{Z_{20}}{Z_{12}} \cdot \dfrac{Z_{30}}{Z_{23}}}$}
+\end{minipage}
+\vspace{2mm}
+
+%--------------------------------------------------------------------------------
+
+
+\subsubsection{Opamp-Impedanzfunktion $Z_{op}$}
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}
+	\centering
+	\includegraphics[width=\textwidth]{"Schema_COP"}
+	\formula{$Z_{op} = - \dfrac{1}{s \cdot C_f}$}
+\end{minipage}\hspace{0.05\textwidth}
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}
+	\centering
+	\includegraphics[width=\textwidth]{"Schema_ROP"}
+	\formula{$Z_{op} = - R_f$}
+\end{minipage}
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}
+	\centering
+	\includegraphics[width=\textwidth]{"Schema_RCOP"}
+	\includegraphics[width=\textwidth]{"SFD_RCOP"}
+	\formula{$Y_{in} = \dfrac{1}{R_1}$}
+	\formula{$Z_{op} = - \dfrac{R_f}{1 + s C_f R_f}$}
+\end{minipage}
+\vspace{2mm}
+
+
+%--------------------------------------------------------------------------------
+
+\subsection{Allgemein einsetzbare Biquads}
+\subsubsection{Bandpass}
+\begin{minipage}[t]{0.45\textwidth}
+	\vspace{0pt}
+	\includegraphics[width=\textwidth]{"Bandpass"}
+\end{minipage}\hspace{0.05\textwidth}
+\begin{minipage}[t]{0.45\textwidth}
+	\vspace{0pt}
+	\includegraphics[width=\textwidth]{"SFD_Bandpass"}
+\end{minipage}\\
+\begin{minipage}[t]{\textwidth}
+	\vspace{0pt}
+	\centering
+	\formula{$T_{bp} = \dfrac{Y_{in} Z_{int1} Y_i Z_i Y_{r2} Z_{int2}}{1 - (Y_{fb1} + Y_{fb2}) Z_{int1} Y_i Z_i Y_{r2} Z_{int2}}$}
+	\formula{$T_{ps} = \dfrac{A \cdot \dfrac{\omega_0}{Q} \cdot s}{s^2 + \dfrac{\omega_0}{Q} s + \omega^2_0}$}
+	\formula{$A = - \dfrac{C_{bp}}{C_{fb}}$}
+	\formula{$\omega_0 = \dfrac{1}{\sqrt{C_{i1} C_{i2} R_{i2} R_{fb}}}$}
+	\formula{$Q = \sqrt{\dfrac{R_{i2}}{R_{fb}}} \dfrac{\sqrt{C_{i1} C_{i2}}}{C_{fb}}$}
+\end{minipage}
+\vspace{2mm}
+
+%--------------------------------------------------------------------------------
+
+
+\subsection{Switched Capacitor Filter}
+	
+	
+%--------------------------------------------------------------------------------
+
