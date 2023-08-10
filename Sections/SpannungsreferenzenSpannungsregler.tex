@@ -12,15 +12,15 @@
 \end{minipage}
 \begin{minipage}[t]{0.3\textwidth}
 	\vspace{0pt}
-	Bessere Temperaturabhängigkeit
+	Bessere Temperaturabhängigkeit\\
+	\includegraphics[width=\textwidth]{"Spannungsteiler_Graph"}
 \end{minipage}
 \vspace{2mm}
 
 \subsubsection{Diodenreferenz}
 \begin{minipage}[t]{0.3\textwidth}
 	\vspace{0pt}								% Abbildung hier einfügen
-	\includegraphics[width=0.4\textwidth]{"Diodenreferenz"}
-	\includegraphics[width=0.4\textwidth]{"Diodenreferenz4dioden"}
+	\includegraphics[width=\textwidth]{"Diodenreferenz"}
 \end{minipage}\hspace{0.05\textwidth}
 \begin{minipage}[t]{0.3\textwidth}
 	\vspace{0pt}
@@ -37,6 +37,8 @@
 	Diode hat Temperaturabhängigkeit von $-2 mV/K$
 	
 	\unitText{$n$}{Parallele Dioden}
+	
+	\includegraphics[width=\textwidth]{"Diodenreferenz_Graph"}
 \end{minipage}
 \vspace{2mm}
 
@@ -91,7 +93,7 @@
 
 
 \subsection{Lineare Spannungsregler}
-\subsection{Spannungsstabilisierung mit Zenerdiode und Bipolar-Transistor}
+\subsubsection{Spannungsstabilisierung mit Zenerdiode und Bipolar-Transistor}
 \begin{minipage}[t]{0.3\textwidth}
 	\vspace{0pt}								% Abbildung hier einfügen
 	\includegraphics[width=\textwidth]{"zdiodebiptransistorspann"}
@@ -106,7 +108,7 @@
 \vspace{2mm}
 
 
-\subsection{Linearer Spannungsregler}
+\subsubsection{Spannungsregler mit OP}
 \begin{minipage}[t]{0.3\textwidth}
 	\vspace{0pt}								% Abbildung hier einfügen
 	\includegraphics[width=\textwidth]{"linearerspannungsregler"}
@@ -118,7 +120,7 @@
 \vspace{2mm}
 
 
-\subsection{Low Dropout Regler}
+\subsubsection{Low Dropout Regler}
 \begin{minipage}[t]{0.3\textwidth}
 	\vspace{0pt}								% Abbildung hier einfügen
 	\includegraphics[width=\textwidth]{"lowdropoutregler"}
@@ -130,13 +132,13 @@
 \vspace{2mm}
 
 
-\subsection{Einstellbare Seriespannungsquelle}
+\subsubsection{Einstellbare Seriespannungsquelle}
 \begin{minipage}[t]{0.3\textwidth}
 	\vspace{0pt}								% Abbildung hier einfügen
 	\includegraphics[width=\textwidth]{"eintseriespannungsquelle"}
 \end{minipage}\hspace{0.05\textwidth}
 \begin{minipage}[t]{0.65\textwidth}
 	\vspace{0pt}								% Beschreibung und Formeln hier einfügen
-	
+	\formula{$V_{out} = V_{ref} \cdot \left(1 + \dfrac{R_2}{R_1}\right) + I_{adj} \cdot (R_1 + R_2)$}
 \end{minipage}
 \vspace{2mm}

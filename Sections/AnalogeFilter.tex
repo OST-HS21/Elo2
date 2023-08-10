@@ -7,8 +7,8 @@
 \begin{minipage}[t]{0.3\textwidth}
 	\vspace{0pt}
 	\formula{$\tau = R C$}\\
-	\formula{$G_1 = \dfrac{1}{1 + j \omega R C}$}\\
-	\formula{$f_{3dB} = \dfrac{1}{2 \pi r C}$}
+	\formula{$G_1 = \dfrac{1}{1 + s R C}$}\\
+	\formula{$f_{3dB} = \dfrac{1}{2 \pi R C}$}
 \end{minipage}
 \begin{minipage}[t]{0.3\textwidth}
 	\vspace{0pt}
@@ -40,6 +40,23 @@
 
 
 \subsection{Aktive Filter}
+\subsubsection{Tiefpass 1. Ordnung}
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}
+	\includegraphics[width=\textwidth]{"Tiefpass1OrdnungOP"}
+\end{minipage}\hspace{0.05\textwidth}
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}
+	\formula{$G = - \dfrac{R_f}{R_1} \dfrac{1}{1 + s C_f R_f}$}
+\end{minipage}
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}
+	\unitText{$G$}{Übertragungsfunktion}
+\end{minipage}
+\vspace{2mm}
+
+
+%--------------------------------------------------------------------------------
 \subsubsection{Sallen Key}
 \begin{minipage}[t]{0.3\textwidth}
 	\vspace{0pt}
@@ -48,8 +65,11 @@
 \begin{minipage}[t]{0.3\textwidth}
 	\vspace{0pt}
 	\formula{$G_0 = \dfrac{R_A + R_B}{R_B}$}\\
-	\formula{$G = \dfrac{G_0}{C_1 C_2 R_1 R_2 s^2 + \left(C_2 (R_1 + R_2) + C_1 R_1 (1 - G_0)\right) + 1}$}
 	\formula{$Q = \dfrac{\sqrt{C_1 C_2 R_1 R_2}}{C_2 (R_1 + R_2) + C_1 R_1 (1 - G_0)}$}
+	\formula{$G = \dfrac{G_0}{C_1 C_2 R_1 R_2 s^2 + s \left(C_2 (R_1 + R_2) + C_1 R_1 (1 - G_0)\right) + 1}$}
+	\formula{$V_2: 0 = (V_2 - V_{in}) \dfrac{1}{R_1} + (V_2 - V_3) + V_2 - V_{out} \cdot s C_1$}
+	\formula{$V_3: 0 = (V_3 - V_2) \dfrac{1}{R_2} + V_3 \cdot s C_2$}
+	\formula{$V_{out} = G_0 V_3$}
 \end{minipage}
 \begin{minipage}[t]{0.3\textwidth}
 	\vspace{0pt}
@@ -107,7 +127,7 @@
 \begin{minipage}[t]{0.6\textwidth}
 	\vspace{0pt}
 	\formula{$A = - \dfrac{R_{fb}}{R_{in}}$}
-	\formula{$V_{out} = - \dfrac{1}{c C_{i2} R_{i2}} V_{opo2}$}
+	\formula{$V_{out} = - \dfrac{1}{s C_{i2} R_{i2}} V_{opo2}$}
 	\formula{$V_{opo2} = - \dfrac{R_2}{R_1} V_{opo1}$}
 	\formula{$V_{opo1} = \dfrac{-1}{s C_{i1}} \left(\dfrac{V_{in}}{R_{in}} + \dfrac{V_{out}}{R_{fb}} + s \cdot C_{fb} V_{out}\right)$}
 	\formula{$G = \dfrac{\dfrac{- R_{fb}}{R_{in}}}{s^2 C_{i1} C_{i2} R_{fb} R_{i2} \dfrac{R_1}{R_2} + s C_{fb} R_{fb + 1}}$}
@@ -134,6 +154,20 @@
 
 %--------------------------------------------------------------------------------
 
+\begin{minipage}[t]{0.3\textwidth}
+	\vspace{0pt}								% Abbildung hier einfügen
+	\includegraphics[width=\textwidth]{"SFD_OP"}
+\end{minipage}\hspace{0.05\textwidth}
+\begin{minipage}[t]{0.6\textwidth}
+	\vspace{0pt}
+	Die Übertragungsfunktion von Opamp-Schaltungen berechnet sich als Summe aller Eingangs-Admittanzen $Y_i$ multipliziert mit der
+	Opamp-Funktion $Z_{OP}$, bzw. Opamp-Impedanz.
+	\formula{$G(s) = Z_{OP} \cdot \sum_{i}^{n} {Y_i}$}
+\end{minipage}
+\vspace{2mm}
+
+%--------------------------------------------------------------------------------
+
 
 \subsubsection{Beispiele}
 \begin{minipage}[t]{0.3\textwidth}
@@ -153,27 +187,56 @@
 
 %--------------------------------------------------------------------------------
 
+\subsubsection{Eingangs-Admittanzen}
+\unitText{$T$}{Taktperiode in s}\\
+\begin{minipage}[t]{0.2\textwidth}
+	\textbf{Widerstand}\\
+	\formula{$Y = \dfrac{1}{R}$}\\
+	
+	\textbf{Kapazität}\\
+	\formula{$Y = s C$}
+\end{minipage}\hspace{0.05\textwidth}
+\begin{minipage}[t]{0.3\textwidth}
+	\textbf{SC Widerstand}\\
+	\formula{$Y = \dfrac{C}{T}$}
+	\includegraphics[width=0.8\textwidth]{"SC_Widerstand"}
+\end{minipage}\hspace{0.05\textwidth}
+\begin{minipage}[t]{0.3\textwidth}
+	\textbf{SC Widerstand Invertiert}\\
+	\formula{$Y = - \dfrac{C}{T}$}
+	\includegraphics[width=0.7\textwidth]{"SC_Widerstand_Inv"}
+\end{minipage}
+
+%--------------------------------------------------------------------------------
+
 
 \subsubsection{Opamp-Impedanzfunktion $Z_{op}$}
-\begin{minipage}[t]{0.3\textwidth}
+\begin{minipage}[t]{0.2\textwidth}
+	\vspace{0pt}
+	\centering
+	\includegraphics[width=\textwidth]{"Schema_ROP"}
+	\formula{$Z_{op} = - R_f$}
+\end{minipage}\hspace{0.05\textwidth}
+\begin{minipage}[t]{0.2\textwidth}
 	\vspace{0pt}
 	\centering
 	\includegraphics[width=\textwidth]{"Schema_COP"}
 	\formula{$Z_{op} = - \dfrac{1}{s \cdot C_f}$}
 \end{minipage}\hspace{0.05\textwidth}
-\begin{minipage}[t]{0.3\textwidth}
-	\vspace{0pt}
-	\centering
-	\includegraphics[width=\textwidth]{"Schema_ROP"}
-	\formula{$Z_{op} = - R_f$}
-\end{minipage}
-\begin{minipage}[t]{0.3\textwidth}
+\begin{minipage}[t]{0.2\textwidth}
 	\vspace{0pt}
 	\centering
 	\includegraphics[width=\textwidth]{"Schema_RCOP"}
-	\includegraphics[width=\textwidth]{"SFD_RCOP"}
 	\formula{$Y_{in} = \dfrac{1}{R_1}$}
 	\formula{$Z_{op} = - \dfrac{R_f}{1 + s C_f R_f}$}
+		\includegraphics[width=\textwidth]{"SFD_RCOP"}
+\end{minipage}\hspace{0.05\textwidth}
+\begin{minipage}[t]{0.2\textwidth}
+	\vspace{0pt}
+	\centering
+	\includegraphics[width=\textwidth]{"SFD_SC_Tiefpass"}
+	\formula{$Z_{OP} = - \dfrac{\dfrac{1}{s C_F} \cdot \dfrac{T}{C_r}}{\dfrac{1}{s C_f} + \dfrac{T}{C_r}}$}
+	\formula{$Z_{OP} = - \dfrac{1}{\dfrac{C_r}{T} + s C_f}$}
 \end{minipage}
 \vspace{2mm}
 

@@ -55,8 +55,7 @@ Ist über die Frequenzen gleichverteilt und wird als \textbf{weisses Rauschen} b
 %--------------------------------------------------------------------------------
 
 \subsubsection{Flicker Noise / Funkelrauschen}
-Entsteht am Übergang von 2 Materialien.
-Wird auch \textbf{Pink noise} genannt. Jede dekade liefert die gleiche Rauschleistung.
+Entsteht am Übergang von 2 Materialien. Wird auch \textbf{Pink noise} genannt.
 Nimmt mit $\dfrac{1}{f}$ ab.
 
 %--------------------------------------------------------------------------------
@@ -150,13 +149,13 @@ Elektronen mit hoher Energie prallen auf Kristallgitter und lösen weitere Elekt
 \subsubsection{Serie- und Parallelschaltung}
 \begin{minipage}[t]{0.4\textwidth}
 	\vspace{0pt}
-	\includegraphics[width=\textwidth]{"WiderstandSerielParallel"}
+	Serienschaltung: \formula{$S = 4 k T (R_1 + R2)$}\\
+	Parallelschaltung: \formula{$S = 4 k T (R_1 \parallel R_2)$}
 \end{minipage}\hspace{0.05\textwidth}
 \begin{minipage}[t]{0.55\textwidth}
 	\vspace{0pt}
-	Äquivaltente Schaltung von Spannungsteiler. Quellenumwandlung und dann Erstazwiderstand gesehen vom Ausgang.
-	\formula{$\overline{v^2_{T_n}} = 4 k T R_T B = 4 k T (R_2 + R_1\parallel R_3) B$}\\
-	\unitText{$\overline{v^2_{T_n}}$}{Rauschleistung von $R_1$, $R_2$ und $R_3$}
+	Muss mit Leistungsdichten ($\text{[S]} = \frac{V^2}{\mathit{Hz}} \text{ bzw. } \frac{A^2}{\mathit{Hz}}$) erfolgen, weil Strom-
+	und Spannungsgrössen sich immer auf eine Bandbreite beziehen!
 \end{minipage}\hspace{0.05\textwidth}
 \vspace{2mm}
 %--------------------------------------------------------------------------------
@@ -172,7 +171,7 @@ Elektronen mit hoher Energie prallen auf Kristallgitter und lösen weitere Elekt
 	\formula{$\mathit{NBW} = \dfrac{1}{4 R C} = \dfrac{\pi}{2} f_c$}
 \end{minipage}\hspace{0.05\textwidth}
 \begin{minipage}[t]{0.3\textwidth}
-	\unitText{$f_c \text{,} \mathit{BW}$}{Systembandbreite (3dB)}\\
+	\unitText{$f_c \text{,} \mathit{BW}$}{Systembandbreite (3dB) / Grenzfrequenz}\\
 	\unitText{$\mathit{NBW}$}{Rauschbandbreite}
 \end{minipage}
 \vspace{2mm}
